@@ -1,10 +1,35 @@
-* {
-	margin: 0;
-	padding: 0;
+:root {
+	--bckgr__color1: #E3CAA5;
+	--bckgr__color2: #CEAB93;
+	--bckgr__color3: #EEEDDE;
+	--bckgr__color4: #084594;
+	--bckgr__color5: #42C2FF;
+	--bckgr__color5: #f8f8f8;
+	--navbar__color1: #185581;
 }
 
+* {
+	margin: 0;
+	padding: 0; 
+	box-sizing: border-box;
+}
+
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+
 .header__logo {
-	width: 100%;
+	display: flex;
+	background: var(--bckgr__color5);
+	align-items: center;
+}
+
+.logo{
+	padding-left: 50px;
 }
 
 .logo__image {
@@ -13,4 +38,77 @@
 
 .button-active {
 	display: none;
+}
+.header__navbar{
+	background: var(--navbar__color1);
+}
+
+.header__navbar {
+	position: relative;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+}
+
+.navbar .navbar__item {
+	padding: 10px;
+	transition: 0.4s;
+}
+
+.navbar .navbar__item a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.5rem;
+	padding: 10px;
+	text-transform: uppercase;
+}
+
+.navbar .navbar__item:hover {
+	/* opacity: 0.4; */
+}
+.active {
+	display: block !important;
+}
+@media screen and (max-width: 992px) {
+	.button-active {
+		display: block;
+		padding-right: 20px;
+	}
+
+	.button button {
+		border: none;
+		cursor: pointer;
+	}
+
+	.button i{
+		font-size: 1.4rem;
+	}
+
+	.logo {
+		margin: 0 auto;
+	}
+
+	.header__navbar {
+		display: none;
+	}
+
+
+	.navbar{
+		display: flex;
+		flex-direction: column;
+
+	} 
+	
+	.navbar .navbar__item {
+		text-align: left;
+		width: 100%;
+		
+	}
+
+	.navbar .navbar__item:hover {
+		background: #000;
+	}
 }

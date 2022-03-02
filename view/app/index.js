@@ -1,13 +1,12 @@
 //bật tắt menu
 
 const menuBtn = document.querySelector(".button-click");
-console.log(menuBtn);
 const headerNav = document.querySelector(".header__navbar");
-console.log(headerNav);
-
+const barIcon = document.querySelector(".fa-bars");
 
 menuBtn.addEventListener("click" , function() {
     headerNav.classList.toggle("active");
+    barIcon.classList.toggle("fa-x");
 });
 
 // headerNav.style.display = "block";
